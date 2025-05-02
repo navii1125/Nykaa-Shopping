@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nykaa Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="nav-left">
+      <img src="./images/img.png" alt="Nykaa Logo" class="nav-logo" />
+      <nav class="main-nav">
+        <a href="makeup.html">Makeup</a>
+        <a href="skin.html">Skin</a>
+        <a href="hair.html">Hair</a>
+        <a href="skin.html">Bath & Body</a>
+        <a href="makeup.html">Men</a>
+      </nav>
+    </div>
+    <div class="nav-right">
+      <input type="text" placeholder="Search for products, brands..." class="search-bar" />
+      <a href="cart.html"><img src="./images/carty.jpg" alt="Cart" class="icon" /></a>
+      <a href="#"><img src="./images/wishlist.png" alt="Wishlist" class="icon" /></a>
+    </div>
+  </header>
+
+  <!-- Banner Carousel -->
+  <section class="carousel">
+    <div class="slides">
+      <img src="./images/logoo.jpg" alt="Banner 1" />
+      <img src="./images/Nykaa-Pink-Friday-Sale-6-Things-You-Need-To-Know-To-Score-The-Best-Deals_1_OI.jpg" alt="Banner 2" />
+      <img src="./images/OIP (3).jpeg" alt="Banner 3" />
+    </div>
+  </section>
+  
+  <!-- Category Scroll -->
+  <section class="category-scroll">
+    <div class="category-wrapper">
+      <div class="category-card">
+        <a href="makeup.html">
+          <img src="./images/OIP.jpeg" alt="Makeup" />
+          <p>Makeup</p>
+        </a>
+      </div>
+      <div class="category-card">
+        <a href="skin.html">
+          <img src="./images/OIP (1).jpeg" alt="Skincare" />
+          <p>Skincare</p>
+        </a>
+      </div>
+      <div class="category-card">
+        <a href="hair.html">
+          <img src="./images/how-to-use-dry-shampoo-1024x709.jpg" alt="Hair" />
+          <p>Hair</p>
+        </a>
+      </div>
+      <div class="category-card">
+        <a href="skin.html">
+          <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=400&q=80" alt="Bath & Body" />
+          <p>Bath & Body</p>
+        </a>
+      </div>
+      <div class="category-card">
+        <a href="makeup.html">
+          <img src="./images/OIP (2).jpeg" alt="Men" />
+          <p>Men</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner and Spin Wheel Section -->
+  <div class="banner-spin-container">
+    <!-- Sales Banner -->
+    <div class="sales-banner">
+      <a href="https://www.nykaa.com/">
+      <img src="./images/banner.png" alt="Sales Banner" />
+      </a>
+    </div>
+  
+    <!-- Spin Wheel Section -->
+    <!-- Spin Wheel Section -->
+    <div class="spin-wheel-container">
+      <div class="spin-wheel" id="spinWheel">
+        <div class="label" id="label-10-off"  >10% Off</div>
+        <div class="label" id="label-20-off">20% Off</div>
+        <div class="label" id="label-free-shipping">Free Shipping</div>
+        <div class="label" id="label-25-off">25% Off</div>
+        <div class="label" id="label-free-gift">Free Gift</div>
+        <div class="label" id="label-buy-1-get-1">Buy 1 Get 1</div>
+      </div>  
+      <button class="spin-btn" id="spinButton">Spin</button>
+      <p class="result" id="result"></p>
+    </div>
+  </div>
+
+  <!-- Popup for Winning Prize -->
+  <div class="popup" id="winPopup">
+    <div class="popup-content">
+      <h3>Congratulations!</h3>
+      <p id="popupPrize">You won: Free Shipping!</p>
+    </div>
+    <button class="popup-close" id="closePopup">Close</button>
+  </div>
+  <div class="popup-overlay" id="popupOverlay"></div>
+
+  <!-- Footer -->
+  <footer class="nykaa-footer">
+    <div class="footer-main">
+      <div class="footer-column logo-col">
+        <h3>NYKAA</h3>
+        <ul>
+          <li>Who are we</li>
+          <li>Careers</li>
+          <li>Authenticity</li>
+          <li>Press</li>
+          <li>Testimonials</li>
+          <li>Nykaa CSR</li>
+          <li>Responsible Disclosure</li>
+          <li>Investor Relations</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Help</h4>
+        <ul>
+          <li>Contact Us</li>
+          <li>FAQs</li>
+          <li>Store Locator</li>
+          <li>Cancellation & Return</li>
+          <li>Shipping & Delivery</li>
+          <li>Sell on Nykaa</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Inspire Me</h4>
+        <ul>
+          <li>Beauty Book</li>
+          <li>Nykaa TV</li>
+          <li>Nykaa Network</li>
+          <li>Buying Guides</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li>Offer Zone</li>
+          <li>New Launches</li>
+          <li>Nykaa Man</li>
+          <li>Nykaa Fashion</li>
+          <li>Nykaa Pro</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Top Categories</h4>
+        <ul>
+          <li>Makeup</li>
+          <li>Skin</li>
+          <li>Hair</li>
+          <li>Bath & Body</li>
+          <li>Appliances</li>
+          <li>Mom and Baby</li>
+          <li>Wellness</li>
+          <li>Fragrance</li>
+          <li>Natural</li>
+          <li>Luxe</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="features">
+        <div class="feature-box">
+          <img src="https://img.icons8.com/ios/50/truck--v1.png" />
+          <div>
+            <strong>FREE SHIPPING</strong>
+            <p>On Orders Above ₹299</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <img src="https://img.icons8.com/ios/50/return.png" />
+          <div>
+            <strong>EASY RETURNS</strong>
+            <p>15-Day Return Policy</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <img src="https://img.icons8.com/ios/50/checked--v1.png" />
+          <div>
+            <strong>100% AUTHENTIC</strong>
+            <p>Products Sourced Directly</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <img src="https://img.icons8.com/ios/50/group-objects.png" />
+          <div>
+            <strong>1900+ BRANDS</strong>
+            <p>1.2 Lakh+ Products</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="social">
+        <p>Show us some love 💙 on social media</p>
+        <div class="icons">
+          <a href="https://www.instagram.com">
+            <img src="https://img.icons8.com/ios/30/instagram-new.png"/>
+          </a>
+          <a href="https://www.facebook.com">
+            <img src="https://img.icons8.com/ios/30/facebook.png"/>
+          </a>
+          <a href="https://www.youtube.com/watch?v=9TczEKz-jOU">
+            <img src="https://img.icons8.com/ios/30/youtube-play.png"/>
+          </a>
+          <a href="https://www.pinterest.com">
+            <img src="https://img.icons8.com/ios/30/pinterest--v1.png"/>
+          </a>
+          <a href="https://www.twitter.com">
+            <img src="https://img.icons8.com/ios/30/twitter--v1.png"/>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Spin Wheel and Popup -->
+  <script>
+    const spinWheel = document.getElementById('spinWheel');
+    const spinButton = document.getElementById('spinButton');
+    const resultText = document.getElementById('result');
+    const winPopup = document.getElementById('winPopup');
+    const popupPrize = document.getElementById('popupPrize');
+    const closePopup = document.getElementById('closePopup');
+    const popupOverlay = document.getElementById('popupOverlay');
+
+    const prizes = [
+      '10% Off',
+      '20% Off',
+      'Free Shipping',
+      '25% Off',
+      'Free Gift',
+      'Buy 1 Get 1'
+    ];
+
+    let isSpinning = false;
+
+    // Function to show the popup
+    function showPopup(prize) {
+      popupPrize.textContent = You won: ${prize}!;
+      winPopup.classList.add('show');
+      popupOverlay.classList.add('show');
+    }
+
+    // Function to hide the popup
+    function hidePopup() {
+      winPopup.classList.remove('show');
+      popupOverlay.classList.remove('show');
+    }
+
+    // Close popup on button click
+    closePopup.addEventListener('click', hidePopup);
+
+    // Close popup on overlay click
+    popupOverlay.addEventListener('click', hidePopup);
+
+    spinButton.addEventListener('click', () => {
+      if (isSpinning) return; // Prevent multiple spins
+
+      isSpinning = true;
+      spinButton.disabled = true;
+      resultText.textContent = '';
+
+      // Generate a random angle (between 3 to 5 full rotations + a random section)
+      const randomRotations = 3 + Math.random() * 2; // 3 to 5 rotations
+      const sectionAngle = 360 / prizes.length-10; // 60 degrees per section
+      const randomSection = Math.floor(Math.random() * prizes.length);
+      const finalAngle = randomRotations * 360 + randomSection * sectionAngle;
+
+      // Apply the rotation
+      spinWheel.style.transform = rotate(${finalAngle}deg);
+
+      // Wait for the animation to finish (4 seconds, matching CSS transition)
+      setTimeout(() => {
+        // Calculate the winning section (considering the wheel's final position)
+        const normalizedAngle = finalAngle % 360;
+        const winningSection = Math.floor((360 - normalizedAngle) / sectionAngle) % prizes.length;
+        const prize = prizes[winningSection];
+
+        resultText.textContent = You won: ${prize}!;
+        showPopup(prize); // Show popup with the prize
+        isSpinning = false;
+        spinButton.disabled = false;
+      }, 4000);
+    });
+
+    // Reset transform after transition to prevent overflow
+    spinWheel.addEventListener('transitionend', () => {
+      spinWheel.style.transition = 'none';
+      const actualAngle = parseFloat(spinWheel.style.transform.replace('rotate(', '').replace('deg)', '')) % 360;
+      spinWheel.style.transform = rotate(${actualAngle}deg);
+      setTimeout(() => {
+        spinWheel.style.transition = 'transform 4s ease-out';
+      }, 0);
+    });
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>

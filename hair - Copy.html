@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skin Products</title>
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h3>Filters</h3>
+      
+      <!-- Category Filter -->
+      <div class="filter-section">
+        <p>Category</p>
+        <select name="category" id="category">
+          <option value="all">All</option>
+          <option value="hairserum">Hair Serum</option>
+          <option value="shampoo">Shampoo</option>
+          <option value="conditioner">Conditioner</option>
+          <option value="hair spray">Hair Spray</option>
+        </select>
+      </div>
+
+      <!-- Brand Filter -->
+      <div class="filter-section">
+        <p>Brand</p>
+        <input type="checkbox" id="brand1" name="brand" value="brand1">
+        <label for="brand1">Brand 1</label><br>
+        <input type="checkbox" id="brand2" name="brand" value="brand2">
+        <label for="brand2">Brand 2</label><br>
+        <input type="checkbox" id="brand3" name="brand" value="brand3">
+        <label for="brand3">Brand 3</label><br>
+      </div>
+
+      <!-- Price Filter -->
+      <div class="filter-section">
+        <p>Price</p>
+        <input type="radio" id="price1" name="price" value="0-500">
+        <label for="price1">0 - 500</label><br>
+        <input type="radio" id="price2" name="price" value="501-1000">
+        <label for="price2">501 - 1000</label><br>
+        <input type="radio" id="price3" name="price" value="1001-2000">
+        <label for="price3">1001 - 2000</label><br>
+      </div>
+
+      <!-- Discount Filter -->
+      <div class="filter-section">
+        <p>Discount</p>
+        <input type="checkbox" id="discount" name="discount" value="discount">
+        <label for="discount">Discounted</label><br>
+      </div>
+
+      <!-- Apply Button -->
+      <button id="applyFilters">Apply Filters</button>
+    </div>
+
+    <div class="products">
+      <!-- Example Skin Products -->
+      <div class="product-card" data-name="Loreal Shampoo" data-price="299">
+        <img src="./images/loreals.jpeg" alt="Product 1">
+        <div class="product-name">Loreal Shampoo</div>
+        <div class="price">MRP: ₹299 <span class="discount">10% Off</span></div>
+        <button class="add-to-bag">Add to Bag</button>
+        <button class="add-to-wishlist">♡ Wishlist</button>
+      </div>
+
+      <div class="product-card" data-name="L'Oréal Conditioner" data-price="399">
+        <img src="./images/lorealc.jpeg" alt="Product 2">
+        <div class="product-name">L'Oréal Conditioner</div>
+        <div class="price">MRP: ₹399 <span class="discount">20% Off</span></div>
+        <button class="add-to-bag">Add to Bag</button>
+        <button class="add-to-wishlist">♡ Wishlist</button>
+      </div>
+
+      <div class="product-card" data-name="Dove Shampoo" data-price="249">
+        <img src="./images/doves.jpg" alt="Product 3">
+        <div class="product-name">Dove Shampoo</div>
+        <div class="price">MRP: ₹249 <span class="discount">15% Off</span></div>
+        <button class="add-to-bag">Add to Bag</button>
+        <button class="add-to-wishlist">♡ Wishlist</button>
+      </div>
+
+      <div class="product-card" data-name="Dove Conditioner" data-price="199">
+        <img src="./images/dovec.jpeg" alt="Product 4">
+        <div class="product-name">Dove Conditioner</div>
+        <div class="price">MRP: ₹199 <span class="discount">25% Off</span></div>
+        <button class="add-to-bag">Add to Bag</button>
+        <button class="add-to-wishlist">♡ Wishlist</button>
+      </div>
+
+      <div class="product-card" data-name="Livon Serum" data-price="449">
+        <img src="./images/livon.jpeg" alt="Product 5">
+        <div class="product-name">Livon Serum</div>
+        <div class="price">MRP: ₹449 <span class="discount">10% Off</span></div>
+        <button class="add-to-bag">Add to Bag</button>
+        <button class="add-to-wishlist">♡ Wishlist</button>
+      </div>
+
+      <div class="product-card" data-name="Streax Hair Serum" data-price="300">
+        <img src="./images/streax.jpeg" alt="Product 6">
+        <div class="product-name">Streax Hair Serum</div>
+        <div class="price">MRP: ₹300 <span class="discount">5% Off</span></div>
+        <button class="add-to-bag">Add to Bag</button>
+        <button class="add-to-wishlist">♡ Wishlist</button>
+      </div>
+
+      <div class="product-card" data-name="Pilgrim Hair Growth Serum" data-price="749">
+        <img src="./images/pilgrim.jpeg" alt="Product 7">
+        <div class="product-name">Pilgrim Hair Growth Serum</div>
+        <div class="price">MRP: ₹749 <span class="discount">15% Off</span></div>
+        <button class="add-to-bag">Add to Bag</button>
+        <button class="add-to-wishlist">♡ Wishlist</button>
+      </div>
+
+      <div class="product-card" data-name="B Blunt Hair Spray" data-price="600">
+        <img src="./images/bblunt.jpg" alt="Product 8">
+        <div class="product-name">B Blunt Hair Spray</div>
+        <div class="price">MRP: ₹600 <span class="discount">10% Off</span></div>
+        <button class="add-to-bag">Add to Bag</button>
+        <button class="add-to-wishlist">♡ Wishlist</button>
+      </div>
+
+      <div class="product-card" data-name="WoW anti-frizz serum" data-price="470">
+        <img src="./images/wow.jpeg" alt="Product 9">
+        <div class="product-name">WoW anti-frizz serum</div>
+        <div class="price">MRP: ₹470 <span class="discount">7% Off</span></div>
+        <button class="add-to-bag">Add to Bag</button>
+        <button class="add-to-wishlist">♡ Wishlist</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const cart = [];
+    const wishlist = [];
+
+    document.querySelectorAll('.add-to-bag').forEach(button => {
+      button.addEventListener('click', function () {
+        const card = this.closest('.product-card');
+        const name = card.dataset.name;
+        const price = card.dataset.price;
+
+        cart.push({ name, price });
+        alert(`${name} added to cart!`);
+        console.log("Cart:", cart);
+      });
+    });
+
+    document.querySelectorAll('.add-to-wishlist').forEach(button => {
+      button.addEventListener('click', function () {
+        const card = this.closest('.product-card');
+        const name = card.dataset.name;
+        const price = card.dataset.price;
+
+        wishlist.push({ name, price });
+        alert(`${name} added to wishlist!`);
+        console.log("Wishlist:", wishlist);
+      });
+    });
+  </script>
+</body>
+</html>

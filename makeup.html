@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Makeup Products</title>
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h3>Filters</h3>
+      
+      <!-- Category Filter -->
+      <div class="filter-section">
+        <p>Category</p>
+        <select name="category" id="category">
+          <option value="all">All</option>
+          <option value="lipstick">Lipstick</option>
+          <option value="foundation">Foundation</option>
+          <option value="mascara">Mascara</option>
+        </select>
+      </div>
+
+      <!-- Brand Filter -->
+      <div class="filter-section">
+        <p>Brand</p>
+        <input type="checkbox" id="brand1" name="brand" value="brand1">
+        <label for="brand1">Brand 1</label><br>
+        <input type="checkbox" id="brand2" name="brand" value="brand2">
+        <label for="brand2">Brand 2</label><br>
+        <input type="checkbox" id="brand3" name="brand" value="brand3">
+        <label for="brand3">Brand 3</label><br>
+      </div>
+
+      <!-- Price Filter -->
+      <div class="filter-section">
+        <p>Price</p>
+        <input type="radio" id="price1" name="price" value="0-500">
+        <label for="price1">0 - 500</label><br>
+        <input type="radio" id="price2" name="price" value="501-1000">
+        <label for="price2">501 - 1000</label><br>
+        <input type="radio" id="price3" name="price" value="1001-2000">
+        <label for="price3">1001 - 2000</label><br>
+      </div>
+
+      <!-- Discount Filter -->
+      <div class="filter-section">
+        <p>Discount</p>
+        <input type="checkbox" id="discount" name="discount" value="discount">
+        <label for="discount">Discounted</label><br>
+      </div>
+
+      <!-- Skin Type Filter -->
+      <div class="filter-section">
+        <p>Skin Type</p>
+        <input type="checkbox" id="skinDry" name="skinType" value="dry">
+        <label for="skinDry">Dry</label><br>
+        <input type="checkbox" id="skinOily" name="skinType" value="oily">
+        <label for="skinOily">Oily</label><br>
+        <input type="checkbox" id="skinNormal" name="skinType" value="normal">
+        <label for="skinNormal">Normal</label><br>
+      </div>
+
+      <!-- Finish Filter -->
+      <div class="filter-section">
+        <p>Finish</p>
+        <input type="radio" id="finishMatte" name="finish" value="matte">
+        <label for="finishMatte">Matte</label><br>
+        <input type="radio" id="finishDewy" name="finish" value="dewy">
+        <label for="finishDewy">Dewy</label><br>
+      </div>
+
+      <!-- Apply Button -->
+      <button id="applyFilters">Apply Filters</button>
+    </div>
+
+    
+
+  <script>
+    // JavaScript for handling filter application
+    document.getElementById('applyFilters').addEventListener('click', function() {
+      const category = document.getElementById('category').value;
+      const brands = Array.from(document.querySelectorAll('input[name="brand"]:checked')).map(input => input.value);
+      const price = Array.from(document.querySelectorAll('input[name="price"]:checked')).map(input => input.value);
+      const discount = document.getElementById('discount').checked;
+      const skinTypes = Array.from(document.querySelectorAll('input[name="skinType"]:checked')).map(input => input.value);
+      const finishes = Array.from(document.querySelectorAll('input[name="finish"]:checked')).map(input => input.value);
+      
+      console.log('Filters applied:', { category, brands, price, discount, skinTypes, finishes });
+      // Here you can filter the product cards based on the selected filters
+    });
+  </script>
+
+    <div class="products">
+      <div class="product-card">
+        <img src="./images/mf.jpeg" alt="Product 1">
+        <div class="product-name">Maybelline Foundation</div>
+        <div class="price">MRP: ₹599 <span class="discount">20% Off</span></div>
+        <button class="add-to-bag">Add to Bag</button>
+        <button class="add-to-wishlist">♡ Wishlist</button>
+      </div>
+
+      <div class="product-card">
+        <img src="./images/lipdtick.jpeg" alt="Product 2">
+        <div class="product-name">Lakme Lipstick</div>
+        <div class="price">MRP: ₹349 <span class="discount">25% Off</span></div>
+        <button class="add-to-bag">Add to Bag</button>
+        <button class="add-to-wishlist">♡ Wishlist</button>
+      </div>
+
+      <div class="product-card">
+        <img src="./images/blush.jpg" alt="Product 3">
+        <div class="product-name">Sugar Blush</div>
+        <div class="price">MRP: ₹499 <span class="discount">15% Off</span></div>
+        <button class="add-to-bag">Add to Bag</button>
+        <button class="add-to-wishlist">♡ Wishlist</button>
+      </div>
+
+      <div class="product-card">
+        <img src="./images/eyeliner.jpeg" alt="Product 4">
+        <div class="product-name">Colorbar Eyeliner</div>
+        <div class="price">MRP: ₹299 <span class="discount">10% Off</span></div>
+        <button class="add-to-bag">Add to Bag</button>
+        <button class="add-to-wishlist">♡ Wishlist</button>
+      </div>
+
+      <div class="product-card">
+        <img src="./images/powder.jpeg" alt="Product 5">
+        <div class="product-name">Nykaa Compact</div>
+        <div class="price">MRP: ₹250 <span class="discount">5% Off</span></div>
+        <button class="add-to-bag">Add to Bag</button>
+        <button class="add-to-wishlist">♡ Wishlist</button>
+      </div>
+
+      <div class="product-card">
+        <img src="./images/mascara.jpeg" alt="Product 6">
+        <div class="product-name">Faces Canada Mascara</div>
+        <div class="price">MRP: ₹399 <span class="discount">30% Off</span></div>
+        <button class="add-to-bag">Add to Bag</button>
+        <button class="add-to-wishlist">♡ Wishlist</button>
+      </div>
+
+      <div class="product-card">
+        <img src="./images/lorea;.png" alt="Product 7">
+        <div class="product-name">L'Oréal Paris Highlighter</div>
+        <div class="price">MRP: ₹799 <span class="discount">35% Off</span></div>
+        <button class="add-to-bag">Add to Bag</button>
+        <button class="add-to-wishlist">♡ Wishlist</button>
+      </div>
+
+      <div class="product-card">
+        <img src="./images/eyeshadow.jpeg" alt="Product 8">
+        <div class="product-name">Huda Beauty Eyeshadow</div>
+        <div class="price">MRP: ₹1200 <span class="discount">40% Off</span></div>
+         <button class="add-to-bag">Add to Bag</button>
+        <button class="add-to-wishlist">♡ Wishlist</button>
+      </div>
+
+      <div class="product-card">
+        <img src="./images/revlon.jpeg" alt="Product 9">
+        <div class="product-name">Revlon Liquid Lipstick</div>
+        <div class="price">MRP: ₹599 <span class="discount">18% Off</span></div>
+        <button class="add-to-bag">Add to Bag</button>
+        <button class="add-to-wishlist">♡ Wishlist</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const cart = [];
+    const wishlist = [];
+  
+    document.querySelectorAll('.add-to-bag').forEach(button => {
+      button.addEventListener('click', function () {
+        const card = this.closest('.product-card');
+        const name = card.dataset.name;
+        const price = card.dataset.price;
+  
+        cart.push({ name, price });
+        alert(`${name} added to cart!`);
+        console.log("Cart:", cart);
+      });
+    });
+  
+    document.querySelectorAll('.add-to-wishlist').forEach(button => {
+      button.addEventListener('click', function () {
+        const card = this.closest('.product-card');
+        const name = card.dataset.name;
+        const price = card.dataset.price;
+  
+        wishlist.push({ name, price });
+        alert(`${name} added to wishlist!`);
+        console.log("Wishlist:", wishlist);
+      });
+    });
+  </script>
+  <script>
+    document.querySelectorAll('.add-to-bag').forEach(button => {
+      button.addEventListener('click', function () {
+        const card = this.closest('.product-card');
+        const name = card.querySelector('.product-name').innerText;
+        const priceText = card.querySelector('.price').innerText;
+        const price = parseFloat(priceText.match(/₹(\d+)/)[1]);
+  
+        // Get existing cart or initialize new
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push({ name, price });
+        localStorage.setItem('cart', JSON.stringify(cart));
+  
+        alert(`${name} added to cart!`);
+      });
+    });
+  
+    document.querySelectorAll('.add-to-wishlist').forEach(button => {
+      button.addEventListener('click', function () {
+        const card = this.closest('.product-card');
+        const name = card.querySelector('.product-name').innerText;
+        const priceText = card.querySelector('.price').innerText;
+        const price = parseFloat(priceText.match(/₹(\d+)/)[1]);
+  
+        const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        wishlist.push({ name, price });
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+  
+        alert(`${name} added to wishlist!`);
+      });
+    });
+  </script>
+<script src="cart.js"></script>
+  
+</body>
+</html>

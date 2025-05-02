@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nykaa Cart</title>
+  <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+  <div class="cart-container">
+    <h1>Your Shopping Bag</h1>
+    <div class="cart-items" id="cart-items">
+      <!-- Cart items will be dynamically inserted here -->
+      <div id="empty-cart-message" style="display: none;">Your cart is empty. Start shopping now!</div>
+    </div>
+    <div class="total" id="total">Total: ₹0</div>
+
+    <h2>Delivery Details</h2>
+    <form id="order-form">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email Address" required />
+      <input type="tel" id="phone" placeholder="Phone Number" required />
+      <textarea id="address" placeholder="Delivery Address" rows="4" required></textarea>
+      <button type="submit">Place Order</button>
+    </form>
+
+    <div id="success-message" style="display: none;">Order placed successfully! Estimated delivery: 3-5 business days.</div>
+  </div>
+
+  <!-- Popup for Order Confirmation -->
+  <div class="popup" id="order-popup">
+    <div class="popup-content">
+      <p>Your order has been placed successfully! Estimated delivery: 3-5 business days.</p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    // Sample cart data for demonstration
+    let cart = []; // This should come from your actual cart management logic
+
+    // Function to update the cart UI
+    function updateCartUI() {
+      const cartItemsDiv = document.getElementById('cart-items');
+      const emptyCartMessage = document.getElementById('empty-cart-message');
+      const totalDiv = document.getElementById('total');
+
+      // Clear previous content
+      cartItemsDiv.innerHTML = '';
+
+      if (cart.length === 0) {
+        // Show empty cart message
+        emptyCartMessage.style.display = 'block';
+        totalDiv.innerText = 'Total: ₹0';
+      } else {
+        // Hide empty cart message
+        emptyCartMessage.style.display = 'none';
+
+        // Add cart items to UI
+        let totalPrice = 0;
+        cart.forEach(item => {
+          const itemDiv = document.createElement('div');
+          itemDiv.innerText = `${item.name} - ₹${item.price} x ${item.quantity}`;
+          cartItemsDiv.appendChild(itemDiv);
+          totalPrice += item.price * item.quantity;
+        });
+
+        // Update total price
+        totalDiv.innerText = `Total: ₹${totalPrice}`;
+      }
+    }
+
+    // Place Order functionality
+    const orderForm = document.getElementById('order-form');
+    orderForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      // Show success message and popup
+      document.getElementById('success-message').style.display = 'block';
+      showPopup();
+    });
+
+    // Show Popup for order confirmation
+    function showPopup() {
+      const popup = document.getElementById('order-popup');
+      popup.style.display = 'flex';
+    }
+
+    // Close Popup
+    function closePopup() {
+      const popup = document.getElementById('order-popup');
+      popup.style.display = 'none';
+    }
+
+    // Initial cart update (simulate adding items)
+    cart.push({ name: 'Lipstick', price: 500, quantity: 2 }); // Example item
+    updateCartUI(); // Update UI with the current cart state
+  </script>
+
+  <script src="cart.js"></script>
+</body>
+</html>
